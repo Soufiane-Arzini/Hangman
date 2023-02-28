@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="800.0" style="-fx-background-color: #030202; -fx-font-family: arial bold;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hangman.GamePlayController">
+    <children>
+        <Button layoutX="370.0" layoutY="564.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="51.0" prefWidth="372.0" style="-fx-background-radius: 20px; -fx-background-color: #abbf2a;" text="TRY ANOTHER WORD">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="29.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.6798780487804877">
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.7591463414634145">
+                            <color>
+                                <Color red="0.6717592477798462" green="0.75" blue="0.1631944477558136" />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.8323170731707318">
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <ImageView fx:id="img" fitHeight="299.0" fitWidth="180.0" layoutX="547.0" layoutY="67.0">
+            <image>
+                <Image url="@Pictures/1.png" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.04" />
+            </effect>
+        </ImageView>
+        <Label alignment="BASELINE_CENTER" layoutX="246.0" layoutY="8.0" prefHeight="72.0" prefWidth="272.0" text="THE HANGMAN " textFill="#cde91e" textOverrun="CLIP">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+            </font>
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant />
+                    </light>
+                </Lighting>
+            </effect>
+        </Label>
+        <Label fx:id="hint_label" layoutX="43.0" layoutY="228.0" text="Hints : ">
+            <font>
+                <Font name="Cooper Black" size="29.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.6682464454976303" endY="0.5355450236966824" startX="0.7014218009478673">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.7164634146341463">
+                            <color>
+                                <Color red="0.8044400215148926" green="0.9100000262260437" blue="0.11829999834299088" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.7320866584777832" green="0.7699999809265137" blue="0.4081000089645386" opacity="0.8500000238418579" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <TextField fx:id="tf1" alignment="TOP_CENTER" editable="false" layoutX="332.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextField>
+        <TextField fx:id="tf2" alignment="TOP_CENTER" editable="false" layoutX="382.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="tf3" alignment="TOP_CENTER" editable="false" layoutX="433.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="tf4" alignment="TOP_CENTER" editable="false" layoutX="481.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="tf5" alignment="TOP_CENTER" editable="false" layoutX="531.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="tf6" alignment="TOP_CENTER" editable="false" layoutX="581.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="tf7" alignment="TOP_CENTER" editable="false" layoutX="635.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="tf8" alignment="TOP_CENTER" editable="false" layoutX="686.0" layoutY="384.0" prefHeight="40.0" prefWidth="50.0" promptText="__" style="-fx-background-color: 030202; -fx-text-fill: #05F139;">
+            <font>
+                <Font name="Arial Bold Italic" size="25.0" />
+            </font>
+        </TextField>
+        <Label layoutX="43.0" layoutY="392.0" text="Guess the word :">
+            <font>
+                <Font name="Cooper Black" size="29.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.7408536585365852">
+                            <color>
+                                <Color red="0.8044400215148926" green="0.9100000262260437" blue="0.11829999834299088" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.7320866584777832" green="0.7699999809265137" blue="0.4081000089645386" opacity="0.8500000238418579" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <TextField fx:id="input" alignment="CENTER" layoutX="337.0" layoutY="472.0" prefHeight="59.0" prefWidth="59.0" promptText="?" style="-fx-background-color: 030202; -fx-border-radius: 6px; -fx-border-width: 0 0 4px 0; -fx-border-color: #abbf2a; -fx-text-fill: #FFFFFF;">
+            <font>
+                <Font name="Arial Bold" size="25.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <Label layoutX="43.0" layoutY="476.0" text="Enter a Letter :">
+            <font>
+                <Font name="Cooper Black" size="29.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.8201219512195123">
+                            <color>
+                                <Color red="0.8044400215148926" green="0.9100000262260437" blue="0.11829999834299088" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.7320866584777832" green="0.7699999809265137" blue="0.4081000089645386" opacity="0.8500000238418579" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Button layoutX="448.0" layoutY="476.0" mnemonicParsing="false" onAction="#CheckInput" prefHeight="51.0" prefWidth="189.0" style="-fx-background-color: #030202; -fx-border-color: #abbf2a; -fx-border-radius: 20px; -fx-border-width: 4px;" text="CHECK" textFill="#abbf2a">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label fx:id="letter_count" layoutX="94.0" layoutY="312.0" textFill="WHITE">
+            <font>
+                <Font name="Berlin Sans FB Demi Bold" size="29.0" />
+            </font>
+        </Label>
+        <Label fx:id="hint" layoutX="90.0" layoutY="273.0" textFill="#c4c4c4">
+            <font>
+                <Font name="Berlin Sans FB" size="26.0" />
+            </font>
+        </Label>
+        <Button fx:id="Back" layoutX="37.0" layoutY="25.0" mnemonicParsing="false" onAction="#switchtohome" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #cde91e; -fx-background-radius: 20px;" text="Back" textFill="#030202">
+            <effect>
+                <Lighting>
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                    <light>
+                        <Light.Distant />
+                    </light>
+                </Lighting>
+            </effect>
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="116.0" layoutX="33.0" layoutY="92.0" stroke="#56412a" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="6.0" width="439.0" />
+      <Label layoutX="47.0" layoutY="101.0" prefHeight="39.0" prefWidth="160.0" text="username :">
+         <font>
+            <Font name="Cooper Black" size="29.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.548780487804878">
+                     <color>
+                        <Color red="0.3479999899864197" green="0.38999998569488525" blue="0.6000000238418579" opacity="0.9900000095367432" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8201219512195123">
+                     <color>
+                        <Color red="0.7686274647712708" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3490196168422699" green="0.3921568691730499" blue="0.6039215922355652" opacity="0.9900000095367432" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="47.0" layoutY="157.0" text="Score         :">
+         <font>
+            <Font name="Cooper Black" size="29.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.6554878048780488">
+                     <color>
+                        <Color red="0.3479999899864197" green="0.39419999718666077" blue="0.6000000238418579" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.7591463414634145">
+                     <color>
+                        <Color red="0.7686274647712708" green="0.7686274647712708" blue="0.7686274647712708" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3490196168422699" green="0.3921568691730499" blue="0.6039215922355652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="usernameP" alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="101.0" prefHeight="39.0" prefWidth="246.0">
+         <font>
+            <Font name="Cooper Black" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8201219512195123">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.33725491166114807" green="0.2549019753932953" blue="0.16470588743686676" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="scoreP" alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="157.0" prefHeight="34.0" prefWidth="239.0">
+         <font>
+            <Font name="Cooper Black" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7298578199052133" endY="1.0" startX="0.7345971563981043">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8201219512195123">
+                     <color>
+                        <Color red="0.8044400215148926" green="0.9100000262260437" blue="0.11829999834299088" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9966442953020134">
+                     <color>
+                        <Color red="0.7333333492279053" green="0.7686274647712708" blue="0.40784314274787903" opacity="0.8500000238418579" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7333333492279053" green="0.7686274647712708" blue="0.40784314274787903" opacity="0.8500000238418579" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+    </children>
+</AnchorPane>
